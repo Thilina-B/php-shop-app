@@ -36,11 +36,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <input type="submit" name="submit" value="Submit">
                     </div>
                     <?php echo $this->session->flashdata('login_error'); ?>
-                    <div class="text">Don't have an account? <label for="">Register Here</label></div>
+                    <div class="text">Don't have an account? <a href="<?php echo base_url(); ?>Customer/register">Register Here</a> </div>
                 </div>
             </div>
         </div>
-
         <?php form_close(); ?>
     </div>
 </body>

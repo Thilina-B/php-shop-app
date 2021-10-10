@@ -36,4 +36,23 @@ class CustomerModal extends CI_Model
         $this->session->set_userdata($data);
         return true;
     }
+
+    function register($first_name, $last_name, $email, $password, $address, $phone_number)
+    {
+        $data = array(
+            'first_name' => $first_name,
+            'last_name' =>  $last_name,
+            'email' =>  $email,
+            'address' => $address,
+            'phone_number' => $phone_number,
+            'password' => $this->hash_password($password),
+        );
+
+        $this->db->insert('users', $data);
+    }
+
+    function hash_password($password)
+    {
+        return password_hash($password, PASSWORD_BCRYPT);
+    }
 }
