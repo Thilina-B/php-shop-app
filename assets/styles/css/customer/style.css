@@ -1,0 +1,136 @@
+/*Google Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../../../images/customer/bg.jpg);
+}
+
+.container {
+  max-width: 850px;
+  width: 100%;
+  background: #fff;
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container .form {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+
+.container .form_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form_content .login_form {
+  width: calc(100% / 2 - 25px);
+}
+
+form .form_content .title {
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+form .form_content .title:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 25px;
+  background: #da6b11;
+}
+
+form .form_content .input_boxes {
+  margin-top: 30px;
+}
+
+form .form_content .input_box {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+
+.form_content .input_box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.form_content .input_box input:focus,
+.form_content .input_box input:valid {
+  border-color: #da6b11;
+}
+
+.form_content .input_box i {
+  position: absolute;
+  color: #da6b11;
+  font-size: 17px;
+}
+
+form .form_content .text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+}
+
+form .form_content .text a {
+  text-decoration: none;
+}
+
+form .form_content .text a:hover {
+  text-decoration: underline;
+}
+
+form .form_content .button {
+  color: #fff;
+  margin-top: 40px;
+}
+
+form .form_content .button input {
+  color: #000000;
+  background: #fff;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+form .form_content .button input:hover {
+  color: #fff;
+  background: #da6b11;
+}
+
+form .form_content label {
+  color: #da6b11;
+  cursor: pointer;
+}
+
+form .form_content label:hover {
+  text-decoration: underline;
+}
