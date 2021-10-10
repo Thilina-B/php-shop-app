@@ -13,6 +13,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <body>
     <div class="wrapper">
         <div class="title">Registration Form</div>
+        <?php echo $this->session->flashdata('register_error'); ?>
         <div class="form">
             <?php echo form_open('Customer/register_user'); ?>
             <div class="input_field">

@@ -48,7 +48,14 @@ class CustomerModal extends CI_Model
             'password' => $this->hash_password($password),
         );
 
-        $this->db->insert('users', $data);
+        $result = $this->db->insert('users', $data);
+
+        if ($result) {
+            return true;
+        } else {
+            $this->session->set_flashdata('register_error', 'Something went wrong.', 300);
+            return false;
+        }
     }
 
     function hash_password($password)
